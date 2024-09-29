@@ -1,4 +1,4 @@
-name: Web Build + Deployment to GitHub Pages 
+name: Web Build + Deployment to GitHub Pages
 
 on:
   # Runs on push to any of the below branches
