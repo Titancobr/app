@@ -1,9 +1,9 @@
-name: Web Build + Deployment to GitHub Pages
+name: Web Build + Deployment to GitHub Pages 
 
 on:
   # Runs on push to any of the below branches
   push:
-    branches:
+    branches: 
       - master
       - main
   # Runs on pull request events that target one of the below branches
@@ -55,7 +55,7 @@ jobs:
       run: |
             echo "GITHUB_REPOSITORY: ${GITHUB_REPOSITORY}, USER: ${GITHUB_REPOSITORY%/*}, PROJECT_BASE_URL: ${GITHUB_REPOSITORY#*/}"
             flutter config --no-analytics
-            flet build web app ${GITHUB_REPOSITORY#*/} --route-url-strategy hash
+            flet build web --base-url ${GITHUB_REPOSITORY#*/} --route-url-strategy hash
 
     - name: Upload Artifact
       uses: actions/upload-pages-artifact@v3
